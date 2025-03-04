@@ -1,11 +1,8 @@
-
 #include <iostream>
 #include <bitset>
 #include<stdio.h>
 
 using namespace std;
-
-
 
 void func3_1()
 {
@@ -123,7 +120,7 @@ void func3_2() {
 
 	cout << "6번 답: " << (isPowerOfTwo ? "No" : "Yes") << endl;
 
-	// 7번 문제
+
 
 }
 
@@ -135,11 +132,52 @@ void func3_3() {
 	switch (myInput) {
 	case 1:
 		cout << "1" << endl;
-		//break;
+		break;
 	case 2:
 		cout << "2" << endl;
 		break;
 	default:
 		cout << "그 외" << endl;
 	}
+}
+
+void func3_4() {
+	// 7번 문제
+	int num7;
+	cout << "숫자 입력: ";
+	cin >> num7;
+
+	for (int i = sizeof(num7)*8-1; i >= 0; i--) {
+		bool isSet = (num7 & (1 << i));
+
+		if (isSet == 1) {
+			cout << i;
+			break;
+		}
+	}
+}
+
+void func3_5() {
+	// 8번 문제
+	int num8;
+	cout << "숫자 입력: ";
+	cin >> num8;
+	int num8_2 = ~num8 + 1;
+	int a = num8 & num8_2;
+
+	//cout << bitset<8>(num8)<<endl;
+	//cout << bitset<8>(num8_2) << endl;
+	//cout << bitset<8>(a) << endl;
+
+	int i = 0;
+	bool b = false;
+	while ('True') {
+		b = (1 << i) & a;
+		if (b == 1) {
+			break;
+		}
+		i++;
+	}
+
+	cout << i;
 }

@@ -17,5 +17,3 @@ void func1_1()
 void func1_2() {
     std::cout << "Function1_2 ½ÇÇàµÊ" << std::endl;
 }
-
-//extern void function1();

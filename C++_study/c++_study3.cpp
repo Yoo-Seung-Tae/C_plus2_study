@@ -1,6 +1,7 @@
 #include <iostream>
 #include <bitset>
 #include<stdio.h>
+#include "main.h"
 
 using namespace std;
 

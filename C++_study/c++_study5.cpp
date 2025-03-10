@@ -2,6 +2,8 @@
 #include <bitset>
 #include <algorithm>
 using namespace std;
+#include "main.h"
+
 
 int func5_add(int a, int b) {
 	return a + b;
@@ -97,8 +99,26 @@ int double_mul(int a, int b) {
 	return a * double_mul(a,b-1);
 }
 
+int fibonacci_for(int a) {
+	if (a == 0 || a == 1) {
+		return 1;
+	}
+	int b[4] = { 0,1,1,0 };
+	for (int i = 2; i <= a; i++) {
+		b[3] = b[1] + b[2];
+		b[0] = b[1];
+		b[1] = b[2];
+		b[2] = b[3];
+	}
+	return b[3];
+}
 
-
+int fibonacci_recu(int a) {
+	if (a == 0 || a == 1) {
+		return 1;
+	}
+	return fibonacci_recu(a - 2) + fibonacci_recu(a - 1);
+}
 
 
 

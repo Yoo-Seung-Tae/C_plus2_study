@@ -1,5 +1,7 @@
 #include <iostream>
 using namespace std;
+#include "main.h"
+
 
 void func2_1()
 {

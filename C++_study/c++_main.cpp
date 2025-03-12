@@ -19,8 +19,7 @@ int main()
 
 	//func8_8(callback);
 
-	func8();
-
+	func10();
 
 }
 

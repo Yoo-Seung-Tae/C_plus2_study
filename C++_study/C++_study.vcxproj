@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="c++_main.cpp" />
     <ClCompile Include="c++_study1.cpp" />
+    <ClCompile Include="c++_study10.cpp" />
     <ClCompile Include="c++_study2.cpp" />
     <ClCompile Include="c++_study3.cpp" />
     <ClCompile Include="c++_study4.cpp" />
@@ -137,6 +138,7 @@
     <ClCompile Include="c++_study7.cpp" />
     <ClCompile Include="c++_study7_2.cpp" />
     <ClCompile Include="c++_study8.cpp" />
+    <ClCompile Include="c++_study9.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />

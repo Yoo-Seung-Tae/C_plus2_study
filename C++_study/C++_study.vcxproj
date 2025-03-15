@@ -130,6 +130,7 @@
     <ClCompile Include="c++_main.cpp" />
     <ClCompile Include="c++_study1.cpp" />
     <ClCompile Include="c++_study10.cpp" />
+    <ClCompile Include="c++_study11.cpp" />
     <ClCompile Include="c++_study2.cpp" />
     <ClCompile Include="c++_study3.cpp" />
     <ClCompile Include="c++_study4.cpp" />

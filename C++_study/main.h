@@ -29,4 +29,4 @@ extern int* ptr;
 void func8_8(void (*callback)());
 void callback();
 
-void func10();
+void func11();

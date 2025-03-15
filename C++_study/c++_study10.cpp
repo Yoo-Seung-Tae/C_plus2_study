@@ -46,11 +46,10 @@ public:
 
 // 10_5
 class BankAccount {
-private:
+public:
 	int account;
 	int balance;
 
-public:
 
 	BankAccount() {
 		account = 333309;
@@ -67,9 +66,124 @@ public:
 	}
 };
 
+// 10-6(10-3 실습1)
+class Rectangle {
+public:
+	int width;
+	int height;
+
+	Rectangle(int width, int height) {
+		this->width = width;
+		this->height = height;
+	}
+
+	int getArea() {
+		return width * height;
+	}
+
+	Rectangle* compareArea(Rectangle& other) {
+		if (this->getArea() > other.getArea()) {
+			return this;
+		}
+		else {
+			return &other;
+		}
+	}
+
+	void showinfo() {
+		cout << "사각형의 넓이: " << getArea() << endl;
+	}
+};
+
+// 10-7
+class Counter {
+private:
+	static int count;
+public:
+	Counter() {
+		count++;
+	}
+
+	static int getCount() {
+		return count;
+	}
+};
+int Counter::count = 0;
+
+class User {
+public:
+	string id;
+	string name;
+	static int count;
+
+	
+	User(string id, string name) {
+		this->id = id;
+		this->name = name;
+		count++;
+	}
+	static int getTotalUsers() {
+		return count;
+	}
+
+	void showinfo() {
+		cout << "회원 아이디 " << id << endl << "회원 이름 " << name << endl;
+	}
+};
+
+int User::count = 0;
+
+// 10-9
+class car {
+private:
+	string brand;
+
+public:
+	void showBrand() const {
+		cout << "브랜드는 " << brand << endl;
+	}
+	void setBrand(string brand) {
+		this->brand = brand;
+	}
+};
 
 
 
+void func10() {
+	car c1;
+	c1.setBrand("samsung");
+	c1.showBrand();
+}
+
+
+
+void func10_8() {
+	User u1("aaa", "111");
+	User u2("bbb", "222");
+	User u3("ccc", "333");
+
+	u1.showinfo();
+	u2.showinfo();
+	u3.showinfo();
+
+	cout << User::getTotalUsers();
+}
+
+
+void func10_7() {
+	Counter c1, c2, c3;
+	cout << Counter::getCount() << endl;
+}
+
+
+void func10_6() {
+	Rectangle r1(10,20);
+	Rectangle r2(20,30);
+
+	Rectangle* larger = r1.compareArea(r2);
+	larger->showinfo();
+
+}
 
 
 void func10_1() {
@@ -112,7 +226,6 @@ void func10_5() {
 	dep1.withdraw(1000);
 
 	cout << dep1.balance << endl;
-
 }
 
 
